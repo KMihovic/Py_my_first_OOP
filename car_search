@@ -1,0 +1,88 @@
+class Car:
+
+    def __init__(self, mark, destination, year, mileage, engine, price):
+        self.mark = mark
+        self.destination = destination
+        self.year = year
+        self.mileage = mileage
+        self.engine = engine
+        self.price = price
+
+    def show(self):
+        print("Mark: {} \nDestination: {} \nYear: {:,} \nMileage: {:,} \nEngine: {} \nPrice: {:,}\n\n"
+              .format(self.mark, self.destination, self.year, self.mileage, self.engine, self.price))
+
+
+car_01 = Car("audi", "Rijeka", 2000, 100000, "diezel", 50000)
+car_02 = Car("BMW", "Zagreb", 2010, 100000, "petrol", 100000)
+car_03 = Car("audi", "Zagreb", 2000, 200000, "diezel", 50000)
+car_04 = Car("BMW", "Zagreb", 2010, 100000, "petrol", 50000)
+car_05 = Car("audi", "Zagreb", 2010, 100000, "diezel", 50000)
+car_06 = Car("BMW", "Rijeka", 2000, 200000, "petrol", 50000)
+car_07 = Car("audi", "Zagreb", 2010, 100000, "diezel", 100000)
+car_08 = Car("BMW", "Rijeka", 2010, 200000, "petrol", 100000)
+car_09 = Car("audi", "Zagreb", 2000, 200000, "diezel", 50000)
+car_10 = Car("BMW", "Rijeka", 2010, 100000, "petrol", 100000)
+car_11 = Car("audi", "Zagreb", 2000, 100000, "petrol", 100000)
+car_12 = Car("BMW", "Rijeka", 2010, 200000, "diezel", 50000)
+car_13 = Car("audi", "Zagreb", 2010, 200000, "petrol", 100000)
+car_14 = Car("BMW", "Zagreb", 2010, 200000, "diezel", 100000)
+car_15 = Car("BMW", "Rijeka", 2000, 200000, "petrol", 100000)
+car_16 = Car("audi", "Zagreb", 2010, 200000, "diezel", 100000)
+car_17 = Car("BMW", "Zagreb", 2010, 100000, "petrol", 50000)
+car_18 = Car("audi", "Rijeka", 2000, 100000, "diezel", 50000)
+car_19 = Car("BMW", "Zagreb", 2010, 200000, "petrol", 50000)
+car_20 = Car("BMW", "Rijeka", 2000, 100000, "diezel", 100000)
+
+search = int(input("Search cars by:\n1. Mark\n2. Year\n3. engine\n"))
+
+if search == 1:
+    mark_1 = int(input("Choose Mark of the car:\n1. Audi\n2. BMW\n".casefold()))
+    if mark_1 == 1:
+        car_01.show()
+        car_03.show()
+        car_05.show()
+    else:
+        car_02.show()
+        car_04.show()
+        car_06.show()
+elif search == 2:
+    year_2 = int(input("Choose year of the car:\n1. 2000\n2. 2010\n"))
+    if year_2 == 1:
+        car_01.show()
+        car_03.show()
+        car_06.show()
+    elif year_2 == 2:
+        car_02.show()
+        car_04.show()
+        car_05.show()
+    else:
+        print("Wrong number, please try again")
+        exit()
+elif search == 3:
+    engine_3 = int(input("Choose engine of the car:\n1. Diezel\n2. Petrol:\n "))
+    if engine_3 == 1:
+        car_01.show()
+        car_03.show()
+        car_05.show()
+        car_07.show()
+        car_09.show()
+        car_11.show()
+        car_13.show()
+        car_15.show()
+        car_17.show()
+        car_19.show()
+    elif engine_3 == 2:
+        car_02.show()
+        car_04.show()
+        car_06.show()
+        car_08.show()
+        car_10.show()
+        car_12.show()
+        car_14.show()
+        car_16.show()
+        car_18.show()
+        car_20.show()
+    else:
+        print("Wrong number, please try again")
+        exit()
